@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Socinvest — Central</title>
+<style>
+  :root{
+    --bg:#160a0d; --card:#25121688; --card-h:#31171c;
+    --line:#4a2129; --txt:#f3e9ea; --muted:#c19aa1;
+    --accent:#c0334a; --accent2:#e0637a; --accent3:#d99a6c;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    background:radial-gradient(1200px 600px at 50% -10%,#3a1119 0%,var(--bg) 62%);
+    color:var(--txt);min-height:100vh;
+    display:flex;flex-direction:column;align-items:center;
+    padding:64px 20px 40px;
+  }
+  .brand{font-size:14px;letter-spacing:.28em;color:var(--muted);text-transform:uppercase;margin-bottom:10px}
+  h1{font-size:34px;font-weight:700;margin-bottom:8px;text-align:center}
+  .sub{color:var(--muted);font-size:15px;margin-bottom:44px;text-align:center;max-width:560px}
+  .grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;width:100%;max-width:1040px;
+  }
+  .card{
+    display:flex;flex-direction:column;
+    background:var(--card);border:1px solid var(--line);border-radius:16px;
+    backdrop-filter:blur(4px);
+    padding:26px 24px;text-decoration:none;color:inherit;
+    transition:transform .16s ease,border-color .16s ease,background .16s ease;
+    position:relative;overflow:hidden;
+  }
+  .card:hover{transform:translateY(-4px);background:var(--card-h);border-color:var(--accent)}
+  .card .bar{position:absolute;top:0;left:0;height:3px;width:100%}
+  .c1 .bar{background:var(--accent)} .c2 .bar{background:var(--accent2)} .c3 .bar{background:var(--accent3)}
+  .icon{font-size:30px;margin-bottom:16px}
+  .card h2{font-size:19px;font-weight:650;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:14px;line-height:1.5;flex-grow:1}
+  .tag{display:inline-block;margin-top:16px;font-size:12px;color:var(--muted);
+       border:1px solid var(--line);border-radius:20px;padding:4px 12px;align-self:flex-start}
+  .open{margin-top:16px;font-size:14px;font-weight:600;color:var(--accent)}
+  .c2 .open{color:var(--accent2)} .c3 .open{color:var(--accent3)}
+  footer{margin-top:48px;color:var(--muted);font-size:12px;text-align:center;line-height:1.6}
+</style>
+</head>
+<body>
+  <div class="brand">Socinvest</div>
+  <h1>Central de Ferramentas</h1>
+  <p class="sub">Acesso rápido aos três painéis de análise e alocação.</p>
+
+  <div class="grid">
+    <a class="card c1" href="https://socinvestassetalocation.streamlit.app/" target="_blank" rel="noopener">
+      <span class="bar"></span>
+      <div class="icon">📊</div>
+      <h2>Asset Allocation</h2>
+      <p>Otimização de carteira: fronteira eficiente, CVaR, walk-forward, Black-Litterman e rebalance com custos.</p>
+      <span class="tag">Streamlit · app interativo</span>
+      <span class="open">Abrir →</span>
+    </a>
+
+    <a class="card c2" href="https://pedropeu14.github.io/Socinvest/" target="_blank" rel="noopener">
+      <span class="bar"></span>
+      <div class="icon">📈</div>
+      <h2>Monitor Técnico &amp; Valuation</h2>
+      <p>Distância da MM200, Z-scores e P/E vs. histórico, com quadrantes, fichas por ativo e catálogo de ETFs.</p>
+      <span class="tag">Dashboard · dados Bloomberg</span>
+      <span class="open">Abrir →</span>
+    </a>
+
+    <a class="card c3" href="https://pedropeu14.github.io/13-Files/13f_dashboard.html" target="_blank" rel="noopener">
+      <span class="bar"></span>
+      <div class="icon">🏦</div>
+      <h2>13F Search</h2>
+      <p>Carteiras dos grandes gestores via SEC EDGAR: consenso, movimentos, rentabilidade e rastreio de papéis.</p>
+      <span class="tag">Dashboard · SEC EDGAR</span>
+      <span class="open">Abrir →</span>
+    </a>
+  </div>
+
+  <footer>
+    Documento de pesquisa — não constitui recomendação de investimento.<br>
+    Socinvest · Central de Ferramentas
+  </footer>
+</body>
+</html>
