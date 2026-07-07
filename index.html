@@ -8,7 +8,7 @@
   :root{
     --bg:#160a0d; --card:#25121688; --card-h:#31171c;
     --line:#4a2129; --txt:#f3e9ea; --muted:#c19aa1;
-    --accent:#c0334a; --accent2:#e0637a; --accent3:#d99a6c;
+    --accent:#c0334a; --accent2:#e0637a; --accent3:#d99a6c;--accent4:#6fbf8f;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
@@ -35,7 +35,7 @@
   }
   .card:hover{transform:translateY(-4px);background:var(--card-h);border-color:var(--accent)}
   .card .bar{position:absolute;top:0;left:0;height:3px;width:100%}
-  .c1 .bar{background:var(--accent)} .c2 .bar{background:var(--accent2)} .c3 .bar{background:var(--accent3)}
+  .c1 .bar{background:var(--accent)} .c2 .bar{background:var(--accent2)} .c3 .bar{background:var(--accent3)}.c4 .bar{background:var(--accent4)} .c4 .open{color:var(--accent4)}
   .icon{font-size:30px;margin-bottom:16px}
   .card h2{font-size:19px;font-weight:650;margin-bottom:8px}
   .card p{color:var(--muted);font-size:14px;line-height:1.5;flex-grow:1}
@@ -49,7 +49,7 @@
 <body>
   <div class="brand">Socinvest</div>
   <h1>Central de Ferramentas</h1>
-  <p class="sub">Acesso rápido aos três painéis de análise e alocação.</p>
+  <p class="sub">Acesso rápido aos quatro painéis de análise e alocação.</p>
 
   <div class="grid">
     <a class="card c1" href="https://socinvestassetalocation.streamlit.app/" target="_blank" rel="noopener">
@@ -76,6 +76,14 @@
       <h2>13F Search</h2>
       <p>Carteiras dos grandes gestores via SEC EDGAR: consenso, movimentos, rentabilidade e rastreio de papéis.</p>
       <span class="tag">Dashboard · SEC EDGAR</span>
+      <span class="open">Abrir →</span>
+    </a>
+    <a class="card c4" href="https://painel-macro-nnrtven4wtzfueu4axnu3z.streamlit.app/" target="_blank" rel="noopener">
+      <span class="bar"></span>
+      <div class="icon">🌎</div>
+      <h2>Painel Macro — EUA</h2>
+      <p>ISM Manufacturing e Services com subíndices, CPI e núcleos, GDP e mercado de trabalho (payroll, desemprego, salários).</p>
+      <span class="tag">Streamlit · FRED + ISM</span>
       <span class="open">Abrir →</span>
     </a>
   </div>
