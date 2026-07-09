@@ -9,7 +9,7 @@
     --bg:#160a0d; --card:#25121688; --card-h:#31171c;
     --line:#4a2129; --txt:#f3e9ea; --muted:#c19aa1;
     --accent:#c0334a; --accent2:#e0637a; --accent3:#d99a6c;
-    --accent4:#b04a6a; --accent5:#c9a24b;
+    --accent4:#b04a6a; --accent5:#c9a24b; --accent6:#d0574e;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
@@ -37,7 +37,7 @@
   .card:hover{transform:translateY(-4px);background:var(--card-h);border-color:var(--accent)}
   .card .bar{position:absolute;top:0;left:0;height:3px;width:100%}
   .c1 .bar{background:var(--accent)} .c2 .bar{background:var(--accent2)} .c3 .bar{background:var(--accent3)}
-  .c4 .bar{background:var(--accent4)} .c5 .bar{background:var(--accent5)}
+  .c4 .bar{background:var(--accent4)} .c5 .bar{background:var(--accent5)} .c6 .bar{background:var(--accent6)}
   .icon{font-size:30px;margin-bottom:16px}
   .card h2{font-size:19px;font-weight:650;margin-bottom:8px}
   .card p{color:var(--muted);font-size:14px;line-height:1.5;flex-grow:1}
@@ -45,7 +45,7 @@
        border:1px solid var(--line);border-radius:20px;padding:4px 12px;align-self:flex-start}
   .open{margin-top:16px;font-size:14px;font-weight:600;color:var(--accent)}
   .c2 .open{color:var(--accent2)} .c3 .open{color:var(--accent3)}
-  .c4 .open{color:var(--accent4)} .c5 .open{color:var(--accent5)}
+  .c4 .open{color:var(--accent4)} .c5 .open{color:var(--accent5)} .c6 .open{color:var(--accent6)}
   footer{margin-top:48px;color:var(--muted);font-size:12px;text-align:center;line-height:1.6}
 </style>
 </head>
@@ -97,6 +97,15 @@
       <h2>Polymarket Tracker</h2>
       <p>Monitoramento de mercados de previsão do Polymarket: probabilidades, movimentos e eventos em destaque.</p>
       <span class="tag">Streamlit · app interativo</span>
+      <span class="open">Abrir →</span>
+    </a>
+
+    <a class="card c6" href="https://pedropeu14.github.io/watchlist-momentum-socinvest/" target="_blank" rel="noopener">
+      <span class="bar"></span>
+      <div class="icon">⚡</div>
+      <h2>Watchlist Momentum</h2>
+      <p>Scanner de sinais EOD com backtester e paper trading: estratégias, portfólio, setores, watchlists e alertas.</p>
+      <span class="tag">Dashboard · Yahoo Finance (EOD)</span>
       <span class="open">Abrir →</span>
     </a>
   </div>
