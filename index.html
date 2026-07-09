@@ -6,16 +6,21 @@
 <title>Socinvest — Central</title>
 <style>
   :root{
-    --bg:#0b0f17; --card:#12182688; --card-h:#1a2234;
-    --line:#232d42; --txt:#dbe4f3; --muted:#8593ab;
+    --bg:#ffffff; --glow:#e8effc; --card:#ffffffcc; --card-h:#f3f5f9;
+    --line:#dde3ee; --txt:#1b2334; --muted:#5b6678;
     --accent:#4f8cff; --accent2:#22c07a; --accent3:#e8b53a;
     --accent4:#9d7bff; --accent5:#3ac8e0; --accent6:#ef5561;
+    color-scheme:light;
+  }
+  html[data-theme="dark"]{
+    --bg:#0b0f17; --glow:#16203a; --card:#12182688; --card-h:#1a2234;
+    --line:#232d42; --txt:#dbe4f3; --muted:#8593ab;
     color-scheme:dark;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   body{
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    background:radial-gradient(1200px 600px at 50% -10%,#16203a 0%,var(--bg) 62%);
+    background:radial-gradient(1200px 600px at 50% -10%,var(--glow) 0%,var(--bg) 62%);
     color:var(--txt);min-height:100vh;
     display:flex;flex-direction:column;align-items:center;
     padding:64px 20px 40px;
@@ -48,9 +53,26 @@
   .c2 .open{color:var(--accent2)} .c3 .open{color:var(--accent3)}
   .c4 .open{color:var(--accent4)} .c5 .open{color:var(--accent5)} .c6 .open{color:var(--accent6)}
   footer{margin-top:48px;color:var(--muted);font-size:12px;text-align:center;line-height:1.6}
+  #theme-toggle{position:fixed;top:16px;right:16px;background:var(--card);color:var(--txt);
+    border:1px solid var(--line);border-radius:8px;padding:6px 10px;cursor:pointer;font-size:15px}
+  #theme-toggle:hover{border-color:var(--accent)}
 </style>
+<script>
+  (function(){
+    if(localStorage.getItem('soc:theme')==='dark')
+      document.documentElement.setAttribute('data-theme','dark');
+  })();
+</script>
 </head>
 <body>
+  <button id="theme-toggle" title="Alternar tema">🌓</button>
+  <script>
+    document.getElementById('theme-toggle').onclick = function(){
+      var dark = document.documentElement.getAttribute('data-theme')==='dark';
+      if(dark){ document.documentElement.removeAttribute('data-theme'); localStorage.setItem('soc:theme','light'); }
+      else { document.documentElement.setAttribute('data-theme','dark'); localStorage.setItem('soc:theme','dark'); }
+    };
+  </script>
   <div class="brand">Socinvest</div>
   <h1>Central de Ferramentas</h1>
   <p class="sub">Acesso rápido aos painéis de análise e alocação.</p>
